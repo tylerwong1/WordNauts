@@ -13,5 +13,10 @@ function Race() {
 export default Race;
 
 function RaceHeader() {
-  return <h1 className="race-header">Race Status</h1>;
+  return (
+    <div className="race-heading">
+      <h1 className="race-header">Race Status</h1>;
+      <h1 className="race-header">Time Remaining 00:00</h1>
+    </div>
+  );
 }
