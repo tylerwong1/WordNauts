@@ -1,15 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Login from './views/Login'; 
+import Race from './views/Race';
 //import LeaderBoard from './components/Leaderboard';
-
-import RaceBoard from "./components/Race/RaceBoard";
 
 function App() {
     return (
         <>
         <Routes>
             <Route path ="/" element={<Login />} />
-            {/* <Route path="/" /> */}
+            <Route path="/race" element={<Race />} />
         </Routes>
         </>
     //   <div className="container">

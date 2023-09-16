@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { IconContext } from "react-icons";
-import { IoIosArrowDown } from "react-icons/io";
+import React from "react";
 
 function BoardPanel({ image }) {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="race-panel">

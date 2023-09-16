@@ -1,4 +1,4 @@
-import RaceBoard from "./components/Race/RaceBoard";
+import RaceBoard from "../components/Race/RaceBoard";
 import "./raceboard.css";
 
 function Race() {
