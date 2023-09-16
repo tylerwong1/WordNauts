@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { useState } from "react";
+import { IconContext } from "react-icons";
+import { IoIosArrowDown } from "react-icons/io";
+
 import "./index.css";
 
 function App() {
@@ -16,24 +20,40 @@ function Header() {
 }
 function LeaderBoard() {
   return (
-    <ul>
-      <BoardPanel />
-      <BoardPanel />
-      <BoardPanel />
-      <BoardPanel />
+    <ul className="leaderboard">
+      <BoardPanel image="test.jpg" />
+      <BoardPanel image="test.jpg" />
+      <BoardPanel image="test.jpg" />
+      <BoardPanel image="test.jpg" />
     </ul>
   );
 }
 
-function BoardPanel() {
+function BoardPanel({ image }) {
+  const percents = [56, 33, 99];
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <li>
-        <img className="avatar"></img>
-        <span>Easy</span>
-        <span>Medium</span>
-        <span>Hard</span>
-      </li>
+      <div className="panel">
+        <li className="panel-info">
+          <img
+            className="avatar"
+            src={image}
+            alt="Image of in-game avatar"
+          ></img>
+          <span>Noun {percents[0]}%</span>
+          <span>Verb {percents[1]}%</span>
+          <span>Adjectives {percents[2]}%</span>
+        </li>
+        <IconContext.Provider value={{ size: "2.4rem" }}>
+          <div
+            className={`icon ${isOpen ? "active" : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <IoIosArrowDown />
+          </div>
+        </IconContext.Provider>
+      </div>
     </>
   );
 }
