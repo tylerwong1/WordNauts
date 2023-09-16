@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Login from './views/Login'; 
 import Race from './views/Race';
-//import LeaderBoard from './components/Leaderboard';
+import Leaderboard from './views/Leaderboard';
 
 function App() {
     return (
@@ -9,6 +9,7 @@ function App() {
         <Routes>
             <Route path ="/" element={<Login />} />
             <Route path="/race" element={<Race />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
         </>
     //   <div className="container">
