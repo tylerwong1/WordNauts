@@ -1,16 +1,29 @@
+import { Routes, Route } from 'react-router-dom';
+import Login from './views/Login'; 
+//import LeaderBoard from './components/Leaderboard';
+
 import RaceBoard from "./components/Race/RaceBoard";
 
 function App() {
-  return (
-    <div className="race-container">
-      <LbHeader />
-      <RaceBoard />
-    </div>
-  );
-}
+    return (
+        <>
+        <Routes>
+            <Route path ="/" element={<Login />} />
+            {/* <Route path="/" /> */}
+        </Routes>
+        </>
+    //   <div className="container">
+    //     <Header />
+    //     <LeaderBoard />
+    //   </div>
+    );
+  };
 
-export default App;
+  export default App;
+  
+  function Header() {
+    return <h1 className="main-header">Classroom 1</h1>;
+  }
 
-function LbHeader() {
-  return <h1 className="lb-header">Classroom 1</h1>;
-}
+  
+  
