@@ -1,17 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return (
+    <div className="container">
+      <Header />
+      <LeaderBoard />
+    </div>
+  );
+}
+
+function Header() {
+  return <h1 className="main-header">Classroom 1</h1>;
+}
+function LeaderBoard() {
+  return (
+    <ul>
+      <BoardPanel />
+      <BoardPanel />
+      <BoardPanel />
+      <BoardPanel />
+    </ul>
+  );
+}
+
+function BoardPanel() {
+  return (
+    <>
+      <li>
+        <img className="avatar"></img>
+        <span>Easy</span>
+        <span>Medium</span>
+        <span>Hard</span>
+      </li>
+    </>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
