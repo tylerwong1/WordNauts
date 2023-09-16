@@ -1,12 +1,16 @@
+import Navbar from "../components/Login/NavBar";
 import RaceBoard from "../components/Race/RaceBoard";
-import "./raceboard.css";
+import "../components/Race/raceboard.css";
 
 function Race() {
   return (
-    <div className="race-container">
-      <RaceHeader />
-      <RaceBoard />
-    </div>
+    <>
+      <Navbar />
+      <div className="race-container">
+        <RaceHeader />
+        <RaceBoard />
+      </div>
+    </>
   );
 }
 
