@@ -38,7 +38,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
-  background-color: #bac8ff;
+  background-color: #222;
 }
 
 .leaderboard-container {
@@ -64,7 +64,7 @@ body {
   gap: 2.4rem;
 }
 
-.panel {
+.board-panel {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -72,7 +72,7 @@ body {
   padding-bottom: 2.4rem;
   padding-right: 1.6rem;
 }
-.panel-info {
+.board-panel-info {
   display: flex;
   gap: 2.4rem;
   align-items: center;

@@ -1,17 +1,21 @@
+import Navbar from "../components/Login/NavBar";
 import BoardPanel from "../components/Leaderboard/BoardPanel";
-import "../components/Leaderboard/leaderboard.css" 
+import "../components/Leaderboard/leaderboard.css";
 
 function LeaderBoard() {
   return (
-    <div className="leaderboard-container">
-      <Header />
-      <ul className="leaderboard">
-        <BoardPanel image="test.jpg" />
-        <BoardPanel image="test.jpg" />
-        <BoardPanel image="test.jpg" />
-        <BoardPanel image="test.jpg" />
-      </ul>
-    </div>
+    <>
+      <Navbar />
+      <div className="leaderboard-container">
+        <Header />
+        <ul className="leaderboard">
+          <BoardPanel image="test.jpg" percent={[54, 32, 78]} />
+          <BoardPanel image="test.jpg" percent={[54, 32, 78]} />
+          <BoardPanel image="test.jpg" percent={[54, 32, 78]} />
+          <BoardPanel image="test.jpg" percent={[54, 32, 78]} />
+        </ul>
+      </div>
+    </>
   );
 }
 
