@@ -41,7 +41,7 @@ body {
   background-color: #bac8ff;
 }
 
-.container {
+.leaderboard-container {
   max-width: 100rem;
   margin: 10rem auto;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ body {
   background-color: #fff;
 }
 
-.main-header {
+.lb-header {
   text-transform: uppercase;
   font-size: 2.6rem;
   margin-bottom: 4.4rem;

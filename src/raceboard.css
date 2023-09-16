@@ -1,0 +1,103 @@
+/* --- 01 TYPOGRAPHY SYSTEM
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* --- 07 WHITESPACE
+
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/* Font weights:
+    Default: 400
+    Medium: 500
+    Bold: 700
+  
+    Line Heights:
+    Default: 1
+    Small: 1.05
+    Medium: 1.2
+    Paragraph default: 1.8
+  
+    - Letter Spacing
+    -0.5px
+    0.75px */
+
+/* REUSABLES */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background-color: #222036;
+}
+
+.panel-info {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.avatar {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon.active {
+  transform: rotate(180deg);
+}
+
+.race-container {
+  max-width: 100rem;
+  margin: 10rem auto;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.1);
+  border: 0.2rem solid rgb(255, 255, 255, 0.8);
+  padding: 3.6rem 2.4rem;
+  border-radius: 8px;
+  background-color: #2a2843;
+}
+
+.race-header {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 4.4rem;
+  border-bottom: 0.2rem solid #fff;
+  padding-bottom: 2.4rem;
+}
+
+.raceboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.race-panel {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.2rem dotted rgb(255, 255, 255, 0.4);
+  padding-bottom: 2.4rem;
+  padding-right: 1.6rem;
+}
+
+.spaceship {
+  height: 8rem;
+  width: 8rem;
+}
