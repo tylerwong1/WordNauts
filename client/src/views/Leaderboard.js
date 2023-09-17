@@ -21,7 +21,7 @@ function LeaderBoard(props) {
         <ul className="leaderboard">
           {keys.map((key) => (
             <BoardPanel
-              image={imgs[0]}
+              image="test.jpg"
               percent={[
                 (
                   Number(playerData[key].correctNounAnswered) /

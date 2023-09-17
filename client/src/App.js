@@ -8,7 +8,7 @@ import { io } from "socket.io-client";
 function App() {
   const [playerData, setPlayerData] = React.useState(5);
   React.useEffect(() => {
-    const socket = io("http://localhost:3003");
+    const socket = io("localhost:3003");
 
     socket.on("connect", () => console.log(socket.id));
     socket.on("connect_error", () => {
