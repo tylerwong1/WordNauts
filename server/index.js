@@ -28,10 +28,21 @@ server.listen(3003, (err) => {
   console.log("Server running on Port ", 3003);
 });
 
+const _dirname = path.dirname("");
+const buildPath = path.join(_dirname, "../client/build");
+
+app.use(express.static(buildPath));
 app.use(express.json());
 
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
+app.get("/*", function(req, res) {
+    res.sendFile(
+      path.join(__dirname, "../client/build/index.html"),
+      function(err) {
+        if (err) {
+          res.status(500).send(err);
+        }
+      }
+    )
 });
 
 app.post("/api/post-data", (req, res) => {
