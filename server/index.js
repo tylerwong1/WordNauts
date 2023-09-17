@@ -1,7 +1,7 @@
 const express = require("express");
 const socketIo = require("socket.io");
 const http = require("http");
-
+const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001",
   },
 });
 
@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
 
 server.listen(3003, (err) => {
   if (err) console.log(err);
-  console.log("Server running on Port ", 3003);
+  console.log("Socket running on Port ", 3003);
 });
 
 const _dirname = path.dirname("");
