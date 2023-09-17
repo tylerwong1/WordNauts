@@ -1,7 +1,7 @@
 const express = require("express");
 const socketIo = require("socket.io");
 const http = require("http");
-const path = require('path');
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -31,18 +31,18 @@ server.listen(3003, (err) => {
 const _dirname = path.dirname("");
 const buildPath = path.join(_dirname, "../client/build");
 
-app.use(express.static(buildPath));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 app.use(express.json());
 
-app.get("/*", function(req, res) {
-    res.sendFile(
-      path.join(__dirname, "../client/build/index.html"),
-      function(err) {
-        if (err) {
-          res.status(500).send(err);
-        }
+app.get("/*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "../client/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
       }
-    )
+    }
+  );
 });
 
 app.post("/api/post-data", (req, res) => {
