@@ -93,3 +93,12 @@ body {
 .icon.active {
   transform: rotate(180deg);
 }
+
+.drop-down {
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  display: none;
+  transform: translateY();
+}

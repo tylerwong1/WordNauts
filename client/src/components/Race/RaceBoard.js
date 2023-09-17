@@ -13,8 +13,12 @@ function RaceBoard(props) {
       {keys.map((key) => (
         <RacePanel
           image="spaceship.png"
-          distance={playerData[key].distancePercentage}
-          name="Tuan"
+          distance={
+            playerData[key].distancePercentage <= 70
+              ? playerData[key].distancePercentage
+              : 70
+          }
+          name={`${key}`}
         />
       ))}
     </ul>

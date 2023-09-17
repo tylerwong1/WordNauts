@@ -2,7 +2,16 @@ import { useState } from "react";
 import { IconContext } from "react-icons";
 import { IoIosArrowDown } from "react-icons/io";
 
-function BoardPanel({ image, percent }) {
+function BoardPanel({
+  image,
+  correctNounAnswered,
+  nounAnswered,
+  correctVerbAnswered,
+  verbAnswered,
+  correctAdjectiveAnswered,
+  adjectiveAnswered,
+  percent,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   console.log(percent);
   return (
@@ -28,6 +37,20 @@ function BoardPanel({ image, percent }) {
             <IoIosArrowDown />
           </div>
         </IconContext.Provider>
+      </div>
+
+      <div className={`drop-down ${isOpen ? "" : "hidden"}`}>
+        <li className="board-panel-info">
+          <span style={{ color: `${percent[0] > 65 ? "green" : "red"}` }}>
+            Nouns {`${correctNounAnswered} / ${nounAnswered}`}
+          </span>
+          <span style={{ color: `${percent[1] > 65 ? "green" : "red"}` }}>
+            Verbs {`${correctVerbAnswered} / ${verbAnswered}`}
+          </span>
+          <span style={{ color: `${percent[2] > 65 ? "green" : "red"}` }}>
+            Adjectives {`${correctAdjectiveAnswered} / ${adjectiveAnswered}`}
+          </span>
+        </li>
       </div>
     </>
   );
