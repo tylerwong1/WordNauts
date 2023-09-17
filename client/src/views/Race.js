@@ -2,15 +2,13 @@ import Navbar from "../components/Login/NavBar";
 import RaceBoard from "../components/Race/RaceBoard";
 import "../components/Race/raceboard.css";
 
-function Race() {
-fetch()
-
+function Race({ playerData }) {
   return (
     <>
       <Navbar />
       <div className="race-container">
         <RaceHeader />
-        <RaceBoard />
+        <RaceBoard playerData={playerData} />
       </div>
     </>
   );
