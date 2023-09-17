@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require("cors");
 const socketIo = require("socket.io");
 const http = require("http");
 const path = require("path");
@@ -31,6 +32,7 @@ server.listen(3003, (err) => {
 const _dirname = path.dirname("");
 const buildPath = path.join(_dirname, "../client/build");
 
+app.use(cors());
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 app.use(express.json());
 
