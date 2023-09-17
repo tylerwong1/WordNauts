@@ -3,6 +3,8 @@ import RaceBoard from "../components/Race/RaceBoard";
 import "../components/Race/raceboard.css";
 
 function Race() {
+fetch()
+
   return (
     <>
       <Navbar />
