@@ -1,9 +1,12 @@
 import { useState } from "react";
 import RacePanel from "./RacePanel";
 
-function RaceBoard({ data }) {
-  const playerData = data.playerData;
-  const keys = Object.keys(data.playerData);
+function RaceBoard(props) {
+  if (props.playerData === 5) return;
+  console.log(props);
+  const playerData = props.playerData;
+  console.log(playerData);
+  const keys = Object.keys(playerData);
 
   return (
     <ul className="raceboard">
@@ -14,10 +17,6 @@ function RaceBoard({ data }) {
           name="Tuan"
         />
       ))}
-      <RacePanel image="spaceship.png" name="Tuan" />
-      <RacePanel image="spaceship.png" name="Tyler" />
-      <RacePanel image="spaceship.png" name="Johnathon" />
-      <RacePanel image="spaceship.png" name="Potatomaster18000" />
     </ul>
   );
 }

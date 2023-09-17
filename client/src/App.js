@@ -6,7 +6,7 @@ import Leaderboard from "./views/Leaderboard";
 import { io } from "socket.io-client";
 
 function App() {
-  const [playerData, setPlayerData] = React.useState(null);
+  const [playerData, setPlayerData] = React.useState(5);
   React.useEffect(() => {
     const socket = io("http://localhost:3003");
 
@@ -14,7 +14,11 @@ function App() {
     socket.on("connect_error", () => {
       setTimeout(() => socket.connect(), 3003);
     });
-    socket.on("json", (data) => setPlayerData(data));
+    socket.on("json", function (data) {
+      console.log(data);
+      return setPlayerData(data.playerData);
+    });
+    console.log(`omg ${playerData}`);
     socket.on("disconnect", () => console.log("client disconnected"));
   }, []);
   return (
